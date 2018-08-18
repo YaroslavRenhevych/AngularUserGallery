@@ -159,7 +159,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col s3 \" >\r\n  <div class=\"card\" appHover=\"higuys\" >\r\n    <div class=\"card-image\">\r\n      <img src=\"{{user.picture.large}}\">\r\n      <span class=\"card-title\"  [ngClass] =\"{'marked': isMarked}\">{{user.name.first}} {{user.name.last}}</span>\r\n    </div>\r\n    <div class=\"card-content\">\r\n      <p>{{user.location.street}} {{user.location.city}} {{user.location.state}}</p>\r\n    </div>\r\n    <div class=\"card-action\">\r\n      <a class=\"waves-effect waves-light btn\" (click)=\"onBotClick()\" >mark</a>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"col s3 \" >\r\n  <div class=\"card\" appHover >\r\n    <div class=\"card-image\">\r\n      <img src=\"{{user.picture.large}}\">\r\n      <span class=\"card-title\"  [ngClass] =\"{'marked': isMarked}\">{{user.name.first}} {{user.name.last}}</span>\r\n    </div>\r\n    <div class=\"card-content\">\r\n      <p>{{user.location.street}} {{user.location.city}} {{user.location.state}}</p>\r\n    </div>\r\n    <div class=\"card-action\">\r\n      <a class=\"waves-effect waves-light btn\" (click)=\"onBotClick()\" >\r\n        <ng-container *ngIf=\"!isMarked; else e\">mark</ng-container>\r\n        <ng-template #e >unmark</ng-template>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
